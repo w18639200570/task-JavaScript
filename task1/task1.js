@@ -19,4 +19,4 @@ function setbgc() {
 	var hong = document.getElementById("red");
 	hong.setAttribute("style","blue");
 }
-
+123
