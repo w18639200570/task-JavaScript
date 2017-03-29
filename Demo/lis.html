@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>style改变样式</title>
+</head>
+<style type="text/css">
+    li{
+        font-size:12px;
+        color:#000000;
+        background:#f7f7f7;
+        width:104px;
+        height:33px;
+        line-height:38px;
+        float:left;
+        list-style:none;
+        text-align:center;
+        margin-left:2px;
+    }
+</style>
+<body>
+<ul>
+    <li>新闻</li>
+    <li>视频</li>
+    <li>小说</li>
+</ul>
+<script type="text/JavaScript">
+    // document.getElementsByTagName("li"); 获取所有的li标签
+    var len = document.getElementsByTagName("li");
+    //为每一个li设置事件和效果
+    for(var i=0;i < len.length;i++){
+        len [i].onmouseover = function(){
+            this.style.background="#777777";
+        };
+        len [i].onmouseout =  function(){
+            this.style.background="#f7f7f7";
+        }
+    }
+</script>
+</body>
+</html>

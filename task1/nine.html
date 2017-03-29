@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="StyleSheet" href="forjiugongge.css" type="text/css">
+    <!--<link rel="StyleSheet" href="forjiugongge.css" type="text/css">-->
     <title>九宫格</title>
+    <style>
+        body {
+            max-width:600px;
+            margin:0 auto;
+        }
+
+        div {
+            background: orange;
+            width: 31%;
+            padding-top: 31%;
+            border-radius: 15px;
+            margin: 1%;
+            display: -webkit-box;
+            float: left;
+        }
+        /*.cel {background-color:orange;}*/
+        footer button {
+            margin:4.5%;
+            width:40%;
+            padding:10px 20px;
+            font-size:3rem;
+            background:lightblue;
+        }
+    </style>
 </head>
 <body>
-<div class="cel"></div>
-<div class="cel"></div>
-<div class="cel"></div>
-<div id="placeholder" style="background:red;"></div>
-<div style="background:lightblue;" class="cel"></div>
-<div class="cel"></div>
-<div class="cel"></div>
-<div class="cel"></div>
-<div class="cel"></div>
+<div class="box" id="box" style="background-color:orange;"></div>
+<div class="box"></div>
+<div id="cel" class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
 <footer>
-    <button id="star" onclick="setbgc()">开始</button>
-    <button id="end">结束</button>
+    <!--开始变色-->
+    <button id="star" onclick="start()">开始</button>
+    <!--清除定时器-->
+    <button id="end" onclick="int=window.clearInterval(int);end()">结束</button>
 </footer>
-<script src="task1.js"></script>
+<script src="2.js"></script>
 </body>
 </html>
