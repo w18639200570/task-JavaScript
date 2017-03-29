@@ -30,9 +30,9 @@ function setbgc(){
     if (num2=num||num1){
         num2++;
     }
-    if(num||num1||num2=9){
-        
-    }
+    // if(num||num1||num2=9){
+    //
+    // }
 }
 function int(){
     var int = setInterval("st()", 1400);

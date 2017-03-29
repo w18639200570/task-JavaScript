@@ -19,48 +19,38 @@ function colors(){
 // 设置颜色主要内容
 function setbgc(){
     // 设置三个随机数字
-    var r = (Math.random()*9);
-    var r1 = (Math.random()*9);
-    var r2 = (Math.random()*9);
-    // 设置随机数字变为整数
-    var num = Math.floor(r);
-    var numo = Math.floor(r1);
-    var numt = Math.floor(r2);
-    // 处理数字相同问题
+    var num = parseInt(Math.random()*9);
+    var numo = parseInt(Math.random()*9);
+    var numt = parseInt(Math.random()*9);
+
+// 防止变成橙色
     if (colors()=="#ffa500"){
         colors();
     }
-    if (num===numo||num===numt) {
-        num++;
-    }
-    if (numo===num||numo===numt){
-        numo++;
-    }
-    if (numt===num||numt===numo){
-        numt++;
-    }
-    if(num >= 9){
-        num--;
-    }
-    if(numo >= 9){
-        num--;
-    }
-    if(numt >= 9){
-        num--;
+    // 处理数字相同问题
+    // if (num===numo||num===numt) {num++;}
+    // if (numo===num||numo===numt){numo++;}
+    // if (numt===num||numt===numo){numt++;}
+    // if(num >= 9){num--;}
+    // if(numo >= 9){num--;}
+    // if(numt >= 9){num--;}
+    // 另一种处理数字问题
+    function random() {
+        return  Math.floor(Math.random()*9)
     }
     // 给随机格子随机颜色
-    co[num].style.backgroundColor=colors();
-    co[numo].style.backgroundColor=colors();
-    co[numt].style.backgroundColor=colors();
+    co[random()].style.backgroundColor=colors();
+    co[random()].style.backgroundColor=colors();
+    co[random()].style.backgroundColor=colors();
     // 写出数据查找报错用
-    console.log(co[num].style.backgroundColor)
-    console.log(co[numo].style.backgroundColor)
-    console.log(co[numt].style.backgroundColor)
-    console.log(co[num])
-    console.log(co[numo])
-    console.log(co[numt])
-    console.log(colors())
-    console.log()
+    console.log(co[num].style.backgroundColor);
+    console.log(co[numo].style.backgroundColor);
+    console.log(co[numt].style.backgroundColor);
+    console.log(co[num]);
+    console.log(co[numo]);
+    console.log(co[numt]);
+    console.log(colors());
+    console.log();
 }
 // 设置循环定时器
 var int;
