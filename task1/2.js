@@ -43,14 +43,16 @@ function setbgc(){
     co[numo].style.backgroundColor=colors();
     co[numt].style.backgroundColor=colors();
     // 写出数据查找报错用
-    console.log(co[num].style.backgroundColor);
-    console.log(co[numo].style.backgroundColor);
-    console.log(co[numt].style.backgroundColor);
-    console.log(co[num]);
-    console.log(co[numo]);
-    console.log(co[numt]);
-    console.log(colors());
-    console.log();
+    // console.log(co[num].style.backgroundColor);
+    // console.log(co[numo].style.backgroundColor);
+    // console.log(co[numt].style.backgroundColor);
+    // console.log(co[num]);
+    // console.log(co[numo]);
+    // console.log(co[numt]);
+    // console.log(colors());
+    console.log(num);
+    console.log(numo);
+    console.log(numt);
 }
 // 设置循环定时器
 var int;
